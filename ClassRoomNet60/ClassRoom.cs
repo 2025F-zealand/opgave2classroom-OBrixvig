@@ -17,6 +17,38 @@ namespace ClassRoomNet60
 
         }
 
-       
-}
+        public void CountMonth()
+        {
+            int winterCount = 0;
+            int springCount = 0;
+            int summerCount = 0;
+            int autumnCount = 0;
+
+            foreach (Student student in StudentList)
+            {
+                string season = student.Seasons(student.BirthMonth);
+
+                switch (season)
+                {
+                    case "Winter":
+                        winterCount++;
+                        break;
+                    case "Spring":
+                        springCount++;
+                        break;
+                    case "Summer":
+                        summerCount++;
+                        break;
+                    case "Autumn":
+                        autumnCount++;
+                        break;
+                }
+            }
+
+            Console.WriteLine($"Winter birthdays: {winterCount}");
+            Console.WriteLine($"Spring birthdays: {springCount}");
+            Console.WriteLine($"Summer birthdays: {summerCount}");
+            Console.WriteLine($"Autumn birthdays: {autumnCount}");
+        }
+    }
 }
