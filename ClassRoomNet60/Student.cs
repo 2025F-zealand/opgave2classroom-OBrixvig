@@ -19,5 +19,10 @@ namespace ClassRoomNet60
             Birthday = birthday;
             BirthMonth = birthmonth;
         }
+
+        public override string ToString()
+        {
+            return Name + " Fødselsdags Dato " + Birthday + BirthMonth;
+        }
     }
 }

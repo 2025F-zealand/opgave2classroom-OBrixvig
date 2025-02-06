@@ -14,4 +14,5 @@ Student kevin = new Student("Kevin", 12, 02);
 classRoom1.StudentList.Add(oliver);
 classRoom1.StudentList.Add(kevin);
 
-
+Console.WriteLine(classRoom1.ClassName +  "\n" + classRoom1.SemesterStart + "\n");
+classRoom1.StudentList.ForEach(student => Console.WriteLine(student));
